@@ -82,6 +82,6 @@ app.get('*', (req, res) => {
 - toujours dans package.json ajouter la version de node utilisé pour le projet
 ```json
 "engines": {
-  "node": "your-node-version"
+  "node": "16.13.2"
 },
 ```
