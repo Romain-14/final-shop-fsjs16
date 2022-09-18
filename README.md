@@ -41,8 +41,6 @@
 
 le projet échauffement peut servir de base
 
-# HAPPY CODING
-
 
 # DÉPLOIEMENT EN SINGLE-APP
 
@@ -67,11 +65,11 @@ le projet échauffement peut servir de base
 - dans index.js ajouter :
 ```js
 ...
-app.use(express.static(path.join(__dirname + "../client/build")));
+app.use(express.static(path.resolve(__dirname, "../client/build")));
 ...
 ...
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + '../client/build' + 'index.html'));
+    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
   });
 ```
 
@@ -85,3 +83,9 @@ app.get('*', (req, res) => {
   "node": "16.13.2"
 },
 ```
+
+- ne pas oublier de gérer le gitignore à la racine en y ajoutant aussi le fichier .env dans le dossier server ainsi que ces variables d'environnement dans Heroku
+- ça implique aussi d'avoir une BDD en ligne, ou d'utiliser le plugin ClearDB sur heroku vu précédemment en cours
+
+
+# HAPPY CODING
