@@ -56,21 +56,7 @@ function HOC({ child, id, isAuthRequired }) {
                     }
                 }
             }
-            // if(isAuthRequired && !TOKEN) {
-            //     dispatch(signout());
-            //     navigate("/");
-            // }
-            // if(!userInfos){
-            //     if(TOKEN !== null){
-            //         const res = await getUser(TOKEN);
-            //         if(res.status === 200){
-            //             dispatch(signin(res.data.result));
-            //         }
-            //     }               
-
-            // } if(isAuthRequired && pathname === "admin" && userInfos?.role_id !== 1){
-            //     return navigate("/");
-            // }
+            
         }
         checkAuth();
     },[]);
@@ -81,12 +67,20 @@ function HOC({ child, id, isAuthRequired }) {
 
     return (
         <main id={id} >
-            {/* {console.log(products,userInfos )} */}
-            <div className={isToggle ? "overlay" : undefined} onClick={() => dispatch(setToggle(!isToggle))}></div>
+            <div 
+                className={isToggle ? "overlay" : undefined} 
+                onClick={() => dispatch(setToggle(!isToggle))}>
+            </div>
             {
-                !products ? <p>LOADING ...</p> 
-                :
-                <Child productsStore={products} userInfosStore={userInfos} cartStore={cart} totalPrice={totalPrice}/>
+                !products ? 
+                    <p>LOADING ...</p> 
+                    :
+                    <Child 
+                        productsStore={products} 
+                        userInfosStore={userInfos} 
+                        cartStore={cart} 
+                        totalPrice={totalPrice}
+                    />
             }
           
         </main>

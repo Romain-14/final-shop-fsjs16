@@ -14,7 +14,7 @@ export default (mailTo, subject, title, text, uuid) => {
 
     const oauth2Client = new OAuth2(
         clientId, clientSecret, "https://developers.google.com/oauthplayground"
-    )
+    );
     
     oauth2Client.setCredentials({
         refresh_token: refreshToken,
@@ -32,7 +32,7 @@ export default (mailTo, subject, title, text, uuid) => {
             refreshToken: refreshToken,
             accessToken: accessToken,
         },
-    })
+    });
 
     const mailOptions = { 
         from: '<game-over@gmail.com>', // sender address

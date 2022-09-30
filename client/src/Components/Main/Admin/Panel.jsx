@@ -37,7 +37,7 @@ function Panel({ productsStore}) {
         e.preventDefault();
         setIsBtnMenuToggled(!isBtnMenuToggled);
         if(e.target.textContent === "home"){
-            setDisplayElement("home")
+            setDisplayElement("home");
             setBtnValues({...btnValues, [e.target.className]: e.target.className});
             return
         }
@@ -189,65 +189,6 @@ function Panel({ productsStore}) {
 
                     </section>
                 }
-                
-                {/* <section className='ctn-admin-panel'>                    
-                    <h3>user</h3>
-                    <ul>
-                        <li onClick={toggleUsersListHandler}>list</li>                        
-                        { toggleUsersList && ( usersList ? 
-                                usersList.map(user=>{
-                                    return (
-                                        <ul className="user-list" key={user.id}>
-                                            <li>{user.firstname} {user.lastname}</li>
-                                            <li>{user.address} {user.zip} {user.city}</li>
-                                            <li>{user.email} {user.phone} {user.city}</li>
-                                        </ul>
-                                    )
-                                })
-                                :
-                                <p>Loading</p> )
-                        }
-                        
-                    </ul>
-                   
-                </section>
-
-                <section className='ctn-admin-panel'>                    
-                    <h3>products</h3>
-                    <ul>
-                        <li onClick={()=>setToggleProductsList(!toggleProductsList)}>list</li>                        
-                        {
-                            toggleProductsList && ( productsStore.length ? 
-                                productsStore.map(product=>{
-                                    return (
-                                        <ul className="user-list" key={product.id}>
-                                            <li>{product.product_title} | {product.quantity_in_stock} in stock</li>
-                                            <li></li>
-                                        </ul>
-                                    )
-                                })
-                                :
-                                <p>Loading</p> )
-                            
-                        }
-                        
-                    </ul>
-                   
-                </section>
-                <section>                    
-                    <h3>categories</h3>
-                    <article>
-
-                    </article>
-                </section>
-
-                <section>                    
-                    <h3>orders</h3>
-                    <article>
-
-                    </article>
-                </section> */}
-
 
 
                 <section id='ctn-btn-admin'>

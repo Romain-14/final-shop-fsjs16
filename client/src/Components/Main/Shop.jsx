@@ -58,7 +58,7 @@ function Shop({ productsStore, cartStore }) {
                             return (
                                 <React.Fragment key={category.id}>
 
-                                <option value={category.title}  >{category.title}</option>
+                                <option value={category.title} >{category.title}</option>
                                 </React.Fragment>
                             )
                         })
@@ -75,7 +75,7 @@ function Shop({ productsStore, cartStore }) {
                     return categorySelected !== "all" ? 
                             product.category_title === categorySelected && 
                                 displayProduct(product)
-                                :
+                            :
                                 displayProduct(product)
                 })}
 

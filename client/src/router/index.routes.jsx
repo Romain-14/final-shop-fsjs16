@@ -18,7 +18,7 @@ function Router() {
             <Route path="shop" element={<HOC child={Shop} id="shop" />}/>
 			<Route path="entry" element={<Entry/>}>
                 <Route path="signup" element={<HOC child={Signup} id="signup" />} />
-                <Route path="validateAccount/:uuid" element={<HOC child={ValidateAccount} />}/>
+                <Route path="validateAccount/:uuid" element={<HOC child={ValidateAccount} isAuthRequired={true} />}/>
                 <Route path="dashboard" element={<HOC child={Dashboard} id="dashboard" isAuthRequired={true}/>} />
                 <Route path="signout" element={<HOC child={Signout} isAuthRequired={true}/>} />
             </Route>

@@ -18,6 +18,7 @@ function Detail({ product, cart, toggleDetailFunc }) {
     return (
 		<aside className="popup">	
 			<p>{product.product_title}</p>
+			<p>{product.description}</p>
 			<button onClick={()=>{
 				if(quantity <= 1) return setQuantity(1);
 				setQuantity(quantity - 1)}
